@@ -20,7 +20,7 @@
 	</script>
 	<div class="container" style="margin: 20px auto; max-width: 800px;">
 		<div class="alert alert-info">
-			Pour aficher le détail de l'utilisation de la réserve parlementaire (ou ministérielle),<br/>
+			Pour afficher le détail de l'utilisation de la réserve parlementaire (ou ministérielle),<br/>
 			choisissez l'un (ou plusieurs) des champs ci-dessous. Le résultat s'affiche dessous.
 		</div>
 		<div id='form_div'>
