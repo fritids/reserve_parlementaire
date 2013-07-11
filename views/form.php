@@ -6,7 +6,6 @@
 	<!-- Bootstrap -->
 	<link href="<?php echo $app->config('assets_path'); ?>/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="<?php echo $app->config('assets_path'); ?>/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
-	<link href="<?php echo $app->config('assets_path'); ?>/css/jquery-ui.min.css" rel="stylesheet" media="screen">
 	<link href="<?php echo $app->config('assets_path'); ?>/css/chosen.css" rel="stylesheet" media="screen">
 	<style type="text/css">
 	#newCalc a{
@@ -94,7 +93,6 @@
 		</span>
 	</div>
 	<script src="<?php echo $app->config('assets_path'); ?>/js/jquery.min.js"></script>
-	<script src="<?php echo $app->config('assets_path'); ?>/js/jquery-ui.js"></script>
 	<script src="<?php echo $app->config('assets_path'); ?>/js/bootstrap.min.js"></script>
 	<script src="<?php echo $app->config('assets_path'); ?>/js/chosen.jquery.min.js"></script>
 	<script src="<?php echo $app->config('assets_path'); ?>/js/chosen-ajax.jquery.min.js"></script>
