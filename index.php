@@ -142,7 +142,7 @@ function get_caption($app) {
 		}
 	}
 
-	$caption_body .= ': '.$app->somme_totale.'&euro;';
+	$caption_body .= ': '.number_format($app->somme_totale).'&euro;';
  
 	return '<p class="text-left alert alert-success">'.$caption_header.'<br/>'.$caption_body.'</p>';
 }
@@ -157,8 +157,8 @@ function array_to_html($array, $app) {
 			$result .= !isset($elem[5]) ? '<td>-</td>' : '<td>' .$elem[5]. '</td>';
 			$result .= !isset($elem[6]) ? '<td>-</td>' : '<td>' .$elem[6]. '</td>';
 			$result .= !isset($elem[2]) ? '<td>-</td>' : '<td>' .$elem[2]. '</td>';
-			$result .= !isset($elem[3]) ? '<td>-</td>' : '<td>' .$elem[3]. '</td>';
-			$result .= !isset($elem[4]) ? '<td>-</td>' : '<td>' .$elem[4]. '</td>';
+			$result .= !isset($elem[3]) ? '<td>-</td>' : '<td>' .number_format($elem[3]). '&euro;</td>';
+			$result .= !isset($elem[4]) ? '<td>-</td>' : '<td>' .number_format($elem[4]). '&euro;</td>';
 		$result .= '</tr>';
 	}
 	return $result;
