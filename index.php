@@ -134,7 +134,7 @@ function get_caption($app) {
 
 	$caption_body .= ': '.$app->somme_totale.'&euro;';
  
-	return '<p class="text-left">'.$caption_header.'<br/>'.$caption_body.'</p>';
+	return '<p class="text-left alert alert-success">'.$caption_header.'<br/>'.$caption_body.'</p>';
 }
 
 function array_to_html($array, $app) {
