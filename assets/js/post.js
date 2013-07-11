@@ -53,7 +53,7 @@ var currentTerm = '';
 
 $("#communes").ajaxChosen({
     type: 'POST',
-    url: path+"/search/communes",
+    url: path+"search/communes",
     dataType: 'json',
 }, function (data) {
     var results = [];
