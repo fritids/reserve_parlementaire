@@ -77,7 +77,9 @@ $app->post('/', function () use($app, $data) {
 			return TRUE;
 		});
 
-		$return['data']['caption'] = get_caption($app);
+		if (sizeof($total) > 0) {
+			$return['data']['caption'] = get_caption($app);
+		}
 	}
 
 
