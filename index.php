@@ -39,6 +39,11 @@ $app->post('/', function () use($app, $data) {
 	
 	$app->somme_totale = 0;
 
+	$return = array();
+	$return['status'] = 'success';
+	$return['data'] = array();
+	$return['data']['caption'] = '';
+
 	if ($_POST['parlementaire_form'] || $_POST['commune_form'] || $_POST['departement_form']) {
 		$total = array_filter($total, function($elem) use($app) {
 
@@ -71,13 +76,11 @@ $app->post('/', function () use($app, $data) {
 
 			return TRUE;
 		});
+
+		$return['data']['caption'] = get_caption($app);
 	}
 
-	$return = array();
-	$return['status'] = 'success';
-	$return['data'] = array();
 
-	$return['data']['caption'] = get_caption($app);
 	$return['data']['pagination'] =  pagination_to_html($page, sizeof($total), $limit);
 
 	$total = array_slice($total, ($page - 1) * $limit, $limit);
