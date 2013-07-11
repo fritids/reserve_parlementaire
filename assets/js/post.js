@@ -15,8 +15,6 @@ $('#form_search_reserve').submit(function() {
 			} else {
 			$('.loading').hide();
 				if ((data.data.caption != 'undefined') && (data.data.caption != '')) {
-				console.log(data.data.caption);
-
 					$('#table_caption').html(data.data.caption);
 					$('#table_caption').show();
 				}
