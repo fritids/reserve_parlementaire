@@ -51,7 +51,6 @@ $app->post('/', function () use($app, $data) {
 			if ($_POST['parlementaire_form'] != '') {
 				$return = FALSE;
 				if (isset($elem[5]) && (stripos($elem[5], $_POST['parlementaire_form']) !== FALSE) && isset($elem[4])) {
-					$app->somme_totale += $elem[4];
 					$calc_done = TRUE;
 				} else {
 					return FALSE;
@@ -62,7 +61,6 @@ $app->post('/', function () use($app, $data) {
 				$return = FALSE;
 				if (isset($elem[0]) && (stripos($elem[0], $_POST['commune_form']) !== FALSE) && isset($elem[4])) {
 					if (!$calc_done) {
-						$app->somme_totale += $elem[4];
 						$calc_done = TRUE;
 					}
 				} else {
@@ -74,14 +72,15 @@ $app->post('/', function () use($app, $data) {
 				$return = FALSE;
 				if (isset($elem[1]) && ($elem[1] == $_POST['departement_form']) && isset($elem[4])) {
 					if (!$calc_done) {
-                                                $app->somme_totale += $elem[4];
                                                 $calc_done = TRUE;
                                         }
 				} else {
 					return FALSE;
 				}
 			}
-
+			if (isset($elem[4])) {
+				$app->somme_totale += $elem[4];
+			}
 			return TRUE;
 		});
 
